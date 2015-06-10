@@ -1,0 +1,90 @@
+package kr.joao.android.study.imagelistex;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kr.joao.android.study.imagelistex.helper.ImageHelper;
+import kr.joao.android.study.imagelistex.model.Column;
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+
+public class MainActivity extends ActionBarActivity {
+	
+	private ListView listView1;
+	
+	private String URL="http://itpaper.co.kr/demo/android/json/column.json";
+	
+
+	private DisplayImageOptions options;
+	
+	private ColumnAdapter adapter;
+	
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		
+		listView1 = (ListView) findViewById(R.id.listView1);
+		options = ImageHelper.getInstance().getImageOptions(this);
+		
+		adapter = new ColumnAdapter(this, R.layout.item_layout, new ArrayList<Column>());
+		
+	}
+	
+	
+	private class ColumnAdapter extends ArrayAdapter<Column>{
+		
+		private int resource;
+		
+		public ColumnAdapter(Context context, int resource, List<Column> objects) {
+			super(context, resource, objects);
+			
+			this.resource = resource;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			
+			View item = convertView;
+			
+			if(item == null){
+				item = getLayoutInflater().inflate(resource, null);
+			}
+			
+			
+			Column column = adapter.getItem(position);
+			
+			
+			ImageView imageView1 = (ImageView)item.findViewById(R.id.imageView1);
+			TextView textView1 = (TextView)item.findViewById(R.id.textView1);
+			TextView textView2 = (TextView)item.findViewById(R.id.textView2);
+			
+			int num = column.getNum();
+			String subject = column.getSubject();
+			String contents = column.getContents();
+			
+			textView1.setText(subject);
+			textView2.setText(contents);
+			
+			ImageLoader.getInstance().displayImage(column.getImg(), imageView1);
+			
+			return item;
+			
+			
+		}
+	}
+	
+}

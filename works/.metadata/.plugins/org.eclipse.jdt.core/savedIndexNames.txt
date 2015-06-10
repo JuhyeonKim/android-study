@@ -1,0 +1,9 @@
+INDEX VERSION 1.127+/Volumes/500G/Docs/Study/Android/works/.metadata/.plugins/org.eclipse.jdt.core
+1542017243.index
+3690469431.index
+244420698.index
+2321864097.index
+3092001156.index
+1641619713.index
+11980839.index
+1270315800.index

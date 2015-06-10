@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;kr.joao.android.study.listadapterex&apos; to &apos;kr.joao.android.study.listbuttonex&apos;&#x0A;- Original project: &apos;14-ListButtonEx&apos;&#x0A;- Original element: &apos;14-ListButtonEx/src/kr.joao.android.study.listadapterex&apos;&#x0A;- Renamed element: &apos;14-ListButtonEx/src/kr.joao.android.study.listbuttonex&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;kr.joao.android.study.listadapterex&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;kr.joao.android.study.listadapterex" name="kr.joao.android.study.listbuttonex" qualified="false" references="true" stamp="1432039886627" textual="false" version="1.0"/>
+</session>

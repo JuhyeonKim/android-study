@@ -1,0 +1,5 @@
+package kr.joao.android.study.jsonlistex.model;
+
+public class Device {
+
+}

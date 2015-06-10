@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;android-async-http-1.4.6.jar&apos; to &apos;libs&apos;&#x0A;- Original project: &apos;31-SimpleHTTPEx&apos;&#x0A;- Destination element: &apos;libs&apos;&#x0A;- Original element: &apos;android-async-http-1.4.6.jar&apos;" description="Copy file" element1="libs/android-async-http-1.4.6.jar" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1433246951593" target="/32-ParamSendEx/libs" units="0" version="1.0"/>
+</session>

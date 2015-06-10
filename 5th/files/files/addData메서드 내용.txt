@@ -1,0 +1,16 @@
+
+  /** 데이터 추가 */
+  public void addData() {
+    adapter.add(new Food("딸기", "꼭지가 마르지 않고 진한 푸른색을 띠는 것이 좋다.", R.drawable.food1));
+    adapter.add(new Food("달래", "알뿌리가 굵은 것일수록 향이 강하다.", R.drawable.food2));
+    adapter.add(new Food("두릅", "두릅순이 연하고 굵은 것, 잎이 피지 않는 것이 좋다.", R.drawable.food3));
+    adapter.add(new Food("감자", "감자의 표면에 흠집이 적으며 매끄러운 것이 좋다.", R.drawable.food4));
+    adapter.add(new Food("참외", "색깔이 선명하고 꼭지가 싱싱한지 확인하여 구입한다.", R.drawable.food5));
+    adapter.add(new Food("복숭아", "알이 크고 고르며 상처가 없으며 향기가 강한 것을 고른다.", R.drawable.food6));
+    adapter.add(new Food("배", "껍질이 팽팽하며 묵직한 것을 고르고 상처가 없는 것이 좋다.", R.drawable.food7));
+    adapter.add(new Food("고구마", "모양이 고르고 병충해의 흠집이 없을 것이 좋다.", R.drawable.food8));
+    adapter.add(new Food("사과", "껍질에 탄력이 있고 꽉찬 느낌이 드는 것이 좋다.", R.drawable.food9));
+    adapter.add(new Food("배추", "배추 잎을 씹어 보면 고소한 맛이 나고 결구의 상태가 둥근 것이 좋다.", R.drawable.food10));
+    adapter.add(new Food("유자", "껍질이 단단하고 울퉁불퉁 한 것, 상처가 없는 것이 좋다.", R.drawable.food11));
+    adapter.add(new Food("과매기", "통통하고 살이 단단한 것을 고른다.", R.drawable.food12));
+  }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="myArray">
+        <item >가가1</item>
+        <item >가가2</item>
+        <item >가가3</item>
+        <item >가가4</item>
+        <item >가가5</item>
+        <item >가가6</item>
+        <item >가가7</item>
+        <item >가가8</item>
+        <item >가가9</item>
+        <item >가가10</item>
+        <item >가가11</item>
+        <item >가가12</item>
+        <item >가가13</item>
+        <item >가가14</item>
+    </string-array>
+    
+</resources>

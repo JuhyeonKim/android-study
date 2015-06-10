@@ -1,0 +1,23 @@
+package kr.joao.android.study.imagelistex.helper;
+
+public class ImageHelper {
+	
+	private static ImageHelper current;
+	
+	private static getInstance(){
+		if(current == null){
+			current = new ImageHelper();
+		}
+		
+		return current;
+	}
+	
+	public static void freeInstance(){
+		current = null;
+	}
+	
+	private ImageHelper(){
+		super();
+	}
+
+}

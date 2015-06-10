@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--     설치시 보여지는 app의 이름 (앱이름은 여기서 바꿔라) -->
+    <string name="app_name">01-Android</string>
+<!--     처음 보여지는 HelloWorld 가 이거다 -->
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="action_settings">Settings</string>
+    
+    <string name="testText">하이하이하이하이하이</string>
+
+</resources>

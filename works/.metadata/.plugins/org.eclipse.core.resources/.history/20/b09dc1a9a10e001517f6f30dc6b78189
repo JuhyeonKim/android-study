@@ -1,0 +1,117 @@
+package kr.joao.android.study.daumimagesearchex;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kr.joao.android.study.daumimagesearchex.model.Image;
+import kr.joao.android.study.helper.ImageHelper;
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+
+public class MainActivity extends ActionBarActivity implements OnClickListener, OnItemClickListener{
+	
+	
+	private ListView listView1;
+	private Button button1;
+	private EditText editText1;
+	
+	private ImageAdapter adapter;
+	
+	private DisplayImageOptions option;
+	
+	private View footerView;
+	private LinearLayout footer;
+	
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		listView1 = (ListView)findViewById(R.id.listView1);
+		button1 = (Button)findViewById(R.id.button1);
+		editText1 = (EditText)findViewById(R.id.editText1);
+		
+		button1.setOnClickListener(this);
+		
+		option = ImageHelper.getInstance().getImageOptions(this);
+		adapter = new ImageAdapter(this, R.layout.item_layout, new ArrayList<Image>());
+		listView1.setAdapter(adapter);
+		
+		footerView = getLayoutInflater().inflate(R.layout.list_footer, null);
+		footer = (LinearLayout)footerView.findViewById(R.id.llFooterContainer);
+		listView1.addFooterView(footerView);
+		footer.setVisibility(View.GONE);
+	}
+	
+	
+	private class ImageAdapter extends ArrayAdapter<Image>{
+		
+		private int resource;
+		
+		public ImageAdapter(Context context, int resource, List<Image> objects) {
+			super(context, resource, objects);
+			
+			this.resource = resource;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			
+			View item = convertView;
+			
+			if(item == null){
+				item = getLayoutInflater().inflate(resource, null);
+			}
+			
+			
+			Image image = adapter.getItem(position);
+			if(image != null){
+				
+				ImageView imageView1 = (ImageView)item.findViewById(R.id.imageView1);
+				TextView textView1 = (TextView)item.findViewById(R.id.textView1);
+				TextView textView2 = (TextView)item.findViewById(R.id.textView2);
+				
+				textView1.setText(image.getTitle());
+				textView2.setText(image.getWidth() + "*" + image.getHeight());
+				
+				ImageLoader.getInstance().displayImage(image.getThumbnail(), imageView1, option);
+				
+			}
+			return item;
+		}
+	}
+	
+	
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position,
+			long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

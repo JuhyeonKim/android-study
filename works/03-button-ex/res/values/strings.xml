@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">03-button-ex</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="whatGender">당신의 성별은 뭡니까?</string>
+    <string name="man">남자</string>
+    <string name="woman">여자</string>
+
+</resources>
